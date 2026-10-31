@@ -1,0 +1,374 @@
+
+.mybookings-page {
+    min-height: 100vh;
+    background: #f8f6fb;
+    padding-bottom: 45px;
+    color: #28153a;
+}
+
+.mybookings-hero {
+    background: linear-gradient(115deg, #f0e5f5, #faf7fc);
+    padding: 32px 6%;
+}
+
+.mybookings-hero-inner {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.mybookings-hero-icon {
+    width: 76px;
+    height: 76px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #e7d6f0;
+    font-size: 34px;
+}
+
+.mybookings-hero h1 {
+    color: #50164f;
+    font-size: clamp(26px, 3vw, 36px);
+    font-weight: 800;
+    margin: 0 0 8px;
+}
+
+.mybookings-hero p {
+    color: #786384;
+    margin: 0;
+}
+
+.mybookings-content {
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 0 6%;
+}
+
+.mybookings-topline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.mybookings-topline h2 {
+    font-size: 22px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.mybookings-topline span {
+    color: #6e3a78;
+    background: #eee3f4;
+    border-radius: 30px;
+    padding: 7px 13px;
+    font-size: 13px;
+}
+
+.mybookings-list {
+    display: grid;
+    gap: 20px;
+}
+
+.mybooking-card {
+    background: white;
+    border: 1px solid #ebe5f1;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px #30104408;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.mybooking-card:hover {
+    box-shadow: 0 8px 24px #30104412;
+}
+
+.mybooking-main {
+    display: grid;
+    grid-template-columns: 100px minmax(190px, 1.1fr) minmax(220px, 1fr) minmax(170px, 0.8fr);
+    gap: 22px;
+    align-items: center;
+    padding: 24px;
+}
+
+.mybooking-bus-icon {
+    height: 100px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(145deg, #f0e3f5, #f9f5fc);
+    font-size: 48px;
+}
+
+.mybooking-route h3 {
+    font-size: 19px;
+    font-weight: 800;
+    margin: 0 0 5px;
+    color: #24133c;
+}
+
+.mybooking-bus-type {
+    font-size: 13px;
+    color: #81748f;
+    margin: 0 0 18px;
+}
+
+.route-line {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.route-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.from-dot {
+    background: #259b64;
+}
+
+.to-dot {
+    background: #df4552;
+}
+
+.route-arrow {
+    color: #9584a9;
+    margin: 0 4px;
+}
+
+.journey-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    color: #7a6d91;
+    font-size: 12px;
+    margin-top: 17px;
+}
+
+.mybooking-passenger-info {
+    display: grid;
+    gap: 18px;
+    background: #f7f6fb;
+    border-radius: 12px;
+    padding: 17px;
+}
+
+.mybooking-passenger-info > div {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    min-width: 0;
+}
+
+.info-icon {
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    background: #eee3f4;
+    border-radius: 9px;
+    flex-shrink: 0;
+}
+
+.mybooking-passenger-info section {
+    display: grid;
+    gap: 5px;
+    min-width: 0;
+}
+
+.mybooking-passenger-info small {
+    color: #867293;
+    font-size: 12px;
+}
+
+.mybooking-passenger-info strong {
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.mybooking-actions {
+    min-width: 0;
+}
+
+.booking-status {
+    display: inline-block;
+    border-radius: 7px;
+    padding: 7px 10px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.booking-status.confirmed {
+    color: #16834c;
+    background: #e1f6e9;
+}
+
+.booking-status.pending {
+    color: #996300;
+    background: #fff1cc;
+}
+
+.booking-status.cancelled {
+    color: #c8323c;
+    background: #fde8e9;
+}
+
+.booking-reference {
+    font-size: 12px;
+    color: #786c8d;
+    margin: 13px 0 5px;
+    overflow-wrap: anywhere;
+}
+
+.booking-fare {
+    color: #50164f;
+    font-size: 23px;
+    font-weight: 800;
+    margin: 4px 0 14px;
+}
+
+.view-booking-btn {
+    width: 100%;
+    padding: 11px 14px;
+    color: white;
+    background: #641b60;
+    border: 1px solid #641b60;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.view-booking-btn:hover {
+    background: #481044;
+}
+
+.mybooking-expanded {
+    padding: 20px 24px;
+    background: #fbf9fd;
+    border-top: 1px solid #eee7f4;
+}
+
+.mybooking-expanded h4 {
+    margin: 0 0 12px;
+    font-weight: 800;
+    color: #50164f;
+}
+
+.expanded-passenger {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 24px;
+    padding: 11px 0;
+    border-bottom: 1px solid #eee7f4;
+    font-size: 13px;
+}
+
+.expanded-total {
+    text-align: right;
+    font-weight: 800;
+    margin: 15px 0 0;
+    color: #50164f;
+}
+
+.mybookings-empty,
+.mybookings-message {
+    text-align: center;
+    padding: 55px 20px;
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #ebe5f1;
+}
+
+.empty-bus {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.mybookings-empty h2 {
+    color: #50164f;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.mybookings-empty p {
+    color: #81748f;
+    margin-bottom: 22px;
+}
+
+.mybookings-empty button,
+.mybookings-message button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 9px;
+    color: white;
+    background: #641b60;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.mybookings-message {
+    margin: 35px auto;
+    max-width: 600px;
+    color: #50164f;
+}
+
+@media (max-width: 1050px) {
+    .mybooking-main {
+        grid-template-columns: 85px 1fr 1fr;
+    }
+
+    .mybooking-actions {
+        grid-column: 2 / -1;
+    }
+}
+
+@media (max-width: 650px) {
+    .mybookings-hero {
+        padding: 25px 20px;
+    }
+
+    .mybookings-hero-icon {
+        width: 58px;
+        height: 58px;
+        font-size: 27px;
+    }
+
+    .mybookings-content {
+        padding: 0 14px;
+        margin-top: 22px;
+    }
+
+    .mybooking-main {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 18px;
+    }
+
+    .mybooking-bus-icon {
+        height: 90px;
+    }
+
+    .mybooking-actions {
+        grid-column: auto;
+    }
+
+    .journey-meta {
+        gap: 12px;
+    }
+
+    .expanded-total {
+        text-align: left;
+    }
+}

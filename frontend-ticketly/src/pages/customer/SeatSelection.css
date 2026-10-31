@@ -1,0 +1,361 @@
+* {
+    box-sizing: border-box;
+}
+
+.ticketly-page {
+    min-height: 100vh;
+    background: #f3f5fa;
+    color: #172033;
+}
+
+.ticketly-header {
+    height: 60px;
+    background: white;
+    border-bottom: 1px solid #800020;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0 4.5%;
+}
+
+
+
+.ticketly-back {
+    background: transparent;
+    border: none;
+    color: #a00024;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.ticketly-content {
+    max-width: 1450px;
+    margin: auto;
+    padding: 32px 24px;
+}
+
+.ticketly-content h1 {
+    color: #800020;
+    font-size: 29px;
+    font-weight: 750;
+    margin: 14px 0;
+}
+
+.ticketly-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 290px;
+    gap: 30px;
+    align-items: start;
+}
+
+.journey-info {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    background: white;
+    border: 1px solid #e0e5ef;
+    border-radius: 13px;
+    padding: 20px 10px;
+    box-shadow: 0 4px 15px #17203308;
+    margin-bottom: 22px;
+}
+
+.info-item {
+    padding: 0 12px;
+    border-right: 1px solid #e6e9f0;
+    min-width: 0;
+}
+
+.info-item:last-child {
+    border-right: none;
+}
+
+.info-label {
+    color: #7d879c;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.info-value {
+    font-size: 13px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.decks {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin: 0 100px 0 100px;
+}
+
+.deck-card {
+    background: white;
+    border: 1px solid #dfe5ef;
+    border-radius: 13px;
+    padding: 20px;
+    box-shadow: 0 4px 15px #17203308;
+}
+
+.deck-title {
+    color: #800020;
+    font-size: 20px;
+    font-weight: 750;
+    margin-bottom: 15px;
+}
+
+.bus-illustration {
+    height: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fbfcff;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+
+.booking-summary {
+    background: white;
+    border: 1px solid #e0e5ef;
+    border-radius: 13px;
+    padding: 22px;
+    box-shadow: 0 4px 15px #17203308;
+}
+
+.booking-summary h2 {
+    color: #800020;
+    font-size: 21px;
+    font-weight: 750;
+    margin: 0 0 20px;
+}
+
+.booking-summary ul{
+    gap: 10px;
+
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 17px 0;
+    /* border-bottom: 1px solid #e5e8ef; */
+    font-size: 14px;
+}
+
+.summary-total {
+    border-top: 1px solid #e5e8ef;
+    font-size: 17px;
+    font-weight: 750;
+}
+
+.continue-button{
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    background: #533c43;
+    color: white;
+    padding: 14px;
+    font-weight: 650;
+    margin-top: 22px;
+    cursor: not-allowed;
+}
+
+.continue-button:disabled{
+    background: #c28a9b;
+    cursor: not-allowed;
+}
+
+@media (max-width: 1050px) {
+    .ticketly-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-summary {
+        max-width: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .ticketly-header {
+        padding: 0 16px;
+        height: 72px;
+    }
+
+    .ticketly-logo {
+        font-size: 24px;
+    }
+
+    .ticketly-content {
+        padding: 20px 12px;
+    }
+
+    .ticketly-content h1 {
+        font-size: 25px;
+    }
+
+    .journey-info {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px 0;
+    }
+
+    .info-item:nth-child(2n) {
+        border-right: none;
+    }
+
+    .decks {
+        grid-template-columns: 1fr;
+    }
+
+    .deck-card {
+        padding: 16px;
+    }
+}
+
+.deck-card{
+    display: flex;
+    gap: 50px;
+
+}
+
+.seat-column{
+    display: grid;
+    grid-auto-flow: row;
+    gap: 10px;
+    
+}
+
+.seat-column button{
+    width: 5rem;
+    height: 5rem;
+    border: 1.5px solid #9f1239;
+    border-radius: 8px 8px 5px 5px;
+    background: #fff;
+    color: #881337;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+
+
+.seat-column button:hover {
+    background: #881337;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(136, 19, 55, 0.2);
+}
+
+.left-seats{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+}
+.right-seats{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+}
+
+.seat-column button.sleeper-seat {
+    height: 10rem;
+}
+
+
+
+
+/* Tablet */
+@media (max-width: 1050px) {
+    .decks {
+        margin: 0;
+        gap: 16px;
+    }
+
+    .deck-card {
+        gap: 20px;
+        padding: 16px;
+        min-width: 0;
+    }
+
+    .seat-column button {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .seat-column button.sleeper-seat {
+        height: 7rem;
+    }
+
+    .left-seats,
+    .right-seats {
+        gap: 6px;
+    }
+}
+
+@media (max-width: 380px) {
+    .deck-card {
+        padding: 12px 6px;
+        gap: 40px;
+    }
+
+    .seat-column button {
+        width: 4rem;
+        height: 4rem;
+        font-size: 9px;
+    }
+
+    .seat-column button.sleeper-seat {
+        height: 4.5rem;
+    }
+
+    .left-seats,
+    .right-seats {
+        gap: 12px;
+    }
+
+    .left-deck {
+        gap: 5px;
+    }
+}
+
+.seat-column button.sleeper-seat {
+    height: 10rem;
+}
+
+.seat-column button.selected {
+    background: #3b010191;
+    color: white;
+    border-color: #800020;
+}
+
+.selected-seats-list {
+    list-style: none;
+    padding: 0;
+
+}
+
+.selected-seats-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    border: 1px solid #f0dada;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.seat-column button:disabled{
+    background-color: rgba(39, 19, 19, 0.071);
+    border: 1px solid rgba(0, 0, 0, 0.049);
+    cursor:default;
+    transition: none;
+}
+
+.seat-column button:hover:disabled{
+    background: rgba(39, 19, 19, 0.071);
+    transform: none;
+    color: #881337;
+    box-shadow: none;
+}

@@ -1,0 +1,173 @@
+
+.booking-page {
+    min-height: 100vh;
+    background: #f7f5fa;
+    padding: 35px 16px;
+}
+
+.booking-container {
+    max-width: 760px;
+    margin: auto;
+}
+
+.booking-heading h2 {
+    color: #35106e;
+    font-weight: 750;
+    margin-bottom: 6px;
+}
+
+.booking-heading p {
+    color: #777;
+    margin-bottom: 24px;
+}
+
+.booking-bus-card,
+.passenger-card {
+    background: white;
+    padding: 22px;
+    border: 1px solid #e8e0f1;
+    border-radius: 14px;
+    margin-bottom: 18px;
+}
+
+.booking-bus-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.booking-bus-card h3 {
+    font-size: 18px;
+    color: #35106e;
+    margin-bottom: 8px;
+}
+
+.booking-bus-card p {
+    margin: 0;
+    color: #666;
+}
+
+.booking-seat-count,
+.passenger-card-heading span {
+    background: #f0e8fc;
+    color: #4d18a4;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: 650;
+    white-space: nowrap;
+}
+
+.passenger-heading {
+    color: #35106e;
+    margin: 28px 0 16px;
+    font-weight: 700;
+}
+
+.passenger-card-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.passenger-card-heading h4 {
+    margin: 0;
+    font-size: 17px;
+}
+
+.passenger-fields {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 16px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-field label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+}
+
+.form-field input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd3e9;
+    border-radius: 8px;
+    outline: none;
+}
+
+.form-field input:focus {
+    border-color: #4d18a4;
+    box-shadow: 0 0 0 3px #4d18a41a;
+}
+
+.booking-continue-btn {
+    width: 100%;
+    margin-top: 12px;
+    padding: 14px;
+    border: none;
+    border-radius: 9px;
+    background: #4d18a4;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.booking-continue-btn:hover {
+    background: #35106e;
+}
+
+@media (max-width: 520px) {
+    .booking-page {
+        padding: 24px 12px;
+    }
+
+    .booking-bus-card,
+    .passenger-card {
+        padding: 16px;
+    }
+
+    .passenger-fields {
+        grid-template-columns: 1fr;
+    }
+}
+
+.price-breakdown {
+    background: #fff;
+    border: 1px solid #e8e0f1;
+    border-radius: 14px;
+    padding: 22px;
+    margin-top: 24px;
+}
+
+.price-breakdown h3 {
+    color: #35106e;
+    margin-bottom: 20px;
+}
+
+.price-row,
+.price-total {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 0;
+}
+
+.price-row {
+    color: #666;
+    border-bottom: 1px solid #eee;
+}
+
+.price-total {
+    margin-top: 8px;
+    color: #35106e;
+    font-size: 18px;
+    font-weight: 750;
+}

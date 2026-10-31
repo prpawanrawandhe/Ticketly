@@ -1,0 +1,172 @@
+.payment-page {
+    min-height: 100vh;
+    background: #f7f5fa;
+    padding: 40px 16px;
+}
+
+.payment-container {
+    max-width: 620px;
+    margin: auto;
+}
+
+.payment-header {
+    margin-bottom: 24px;
+}
+
+.payment-header h2 {
+    color: #32104f;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+
+.payment-header p {
+    color: #777;
+}
+
+.wallet-card {
+    background: linear-gradient(135deg, #45105f, #812b86);
+    color: white;
+    padding: 26px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 8px 24px #45105f25;
+    margin-bottom: 24px;
+}
+
+.wallet-card p {
+    margin: 0 0 8px;
+    opacity: 0.85;
+}
+
+.wallet-card h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.wallet-icon {
+    border: 2px solid #ffffff80;
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.payment-summary {
+    background: white;
+    padding: 26px;
+    border-radius: 18px;
+    box-shadow: 0 4px 20px #00000008;
+}
+
+.payment-summary h3 {
+    color: #32104f;
+    font-weight: 750;
+    margin-bottom: 22px;
+}
+
+.payment-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 13px 0;
+    border-bottom: 1px solid #eeeaf2;
+    font-size: 14px;
+}
+
+.payment-row span {
+    color: #777;
+}
+
+.payment-row strong {
+    color: #30213b;
+    text-align: right;
+}
+
+.payment-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 0 16px;
+}
+
+.payment-total span {
+    font-weight: 700;
+    color: #32104f;
+}
+
+.payment-total h2 {
+    margin: 0;
+    color: #762b83;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.balance-after {
+    background: #f8f4fb;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.balance-after strong {
+    color: #27824c;
+}
+
+.pay-now-btn {
+    width: 100%;
+    padding: 15px;
+    background: #762b83;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 750;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.pay-now-btn:hover:not(:disabled) {
+    background: #531762;
+    transform: translateY(-1px);
+}
+
+.pay-now-btn:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+}
+
+.secure-note {
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    margin: 16px 0 0;
+}
+
+.wallet-warning {
+    color: #b42318;
+    font-size: 13px;
+    margin: 12px 0 0;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .payment-page {
+        padding: 24px 12px;
+    }
+
+    .payment-summary {
+        padding: 20px 16px;
+    }
+
+    .payment-row {
+        font-size: 13px;
+    }
+}

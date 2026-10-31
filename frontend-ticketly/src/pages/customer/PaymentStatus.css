@@ -1,0 +1,93 @@
+.status-page {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+    background: #f7f5fa;
+}
+
+.status-card {
+    width: 100%;
+    max-width: 460px;
+    background: white;
+    padding: 40px 28px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 35px #32104f12;
+}
+
+.status-icon {
+    width: 78px;
+    height: 78px;
+    margin: 0 auto 22px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.status-icon.success {
+    color: #198754;
+    background: #e3f7eb;
+}
+
+.status-icon.failed {
+    color: #dc3545;
+    background: #fde8ea;
+}
+
+.status-card h2 {
+    color: #32104f;
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.status-card > p {
+    color: #777;
+    line-height: 1.6;
+}
+
+.status-amount {
+    margin: 24px 0;
+    padding: 18px;
+    background: #f8f4fb;
+    border-radius: 12px;
+    color: #777;
+}
+
+.status-amount h3 {
+    color: #762b83;
+    font-size: 28px;
+    font-weight: 800;
+    margin: 8px 0 0;
+}
+
+.status-primary-btn,
+.status-home-btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.status-primary-btn {
+    background: #762b83;
+    color: white;
+    border: none;
+    margin-top: 16px;
+}
+
+.status-primary-btn:hover {
+    background: #531762;
+}
+
+.status-home-btn {
+    background: white;
+    border: 1px solid #ddd;
+    color: #32104f;
+    margin-top: 10px;
+}

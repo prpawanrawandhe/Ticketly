@@ -1,7 +1,7 @@
 const URL = import.meta.env.VITE_API_BASE_URL
 
 const booking_confirm = async (id,access_token) => {
-    const url = `${URL}payments/payment-confirmation/${id}`
+    const url = `${URL}/payments/payment-confirmation/${id}`
 
     try {
         const res = await fetch(url, {

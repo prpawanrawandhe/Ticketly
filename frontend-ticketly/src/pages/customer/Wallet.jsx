@@ -10,7 +10,7 @@ import { AuthContext } from "../../context/AuthContext";
 const Wallet = () => {
     const navigate = useNavigate();
 
-    const [balance, setBalance] = useState(0);
+    const [balance, setBalance] = useState("----");
     const [amount, setAmount] = useState("");
     const [message, setMessage] = useState("");
     const [transactions, setTransactions] = useState([]);

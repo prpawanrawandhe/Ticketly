@@ -1,7 +1,7 @@
 const URL = import.meta.env.VITE_API_BASE_URL
 
 const booking = async (id,booking_data,access_token) => {
-    const url = `${URL}book/create-booking/${id}`
+    const url = `${URL}/book/create-booking/${id}`
 
     try {
         const res = await fetch(url, {

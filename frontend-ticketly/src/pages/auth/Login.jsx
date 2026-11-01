@@ -77,7 +77,6 @@ function Login() {
               e.preventDefault();
               setloading(true)
               const res = await userlogin(username,password,setUsername,setaccess_token)
-              console.log(res)
               if (res === "Authenticated"){
                 navigate(from,{replace:true, state: bookingData})
               } else if(res === 401){

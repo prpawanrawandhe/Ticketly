@@ -12,6 +12,8 @@ function Login() {
   const location = useLocation()
   const from = location.state?.from || '/'
   const bookingData = location.state?.bookingData;
+  const [loading, setloading] = useState(false)
+  const [error, seterror] = useState("")
 
   return (
     <div
@@ -73,10 +75,17 @@ function Login() {
           <form
             onSubmit={async(e) => {
               e.preventDefault();
+              setloading(true)
               const res = await userlogin(username,password,setUsername,setaccess_token)
-              if (res){
+              console.log(res)
+              if (res === "Authenticated"){
                 navigate(from,{replace:true, state: bookingData})
+              } else if(res === 401){
+                seterror("Invalid Credentials, Try Again!!!")
+              } else{
+                seterror("Server Not Found")
               }
+              setloading(false)
             }}
           >
             <div className="mb-4">
@@ -115,12 +124,14 @@ function Login() {
 
             <button
               type="submit"
+              disabled = {loading}
               className="btn btn-lg w-100 text-white fw-bold py-3"
               style={{ backgroundColor: "#a00024" }}
             >
               Login →
             </button>
           </form>
+          <p className="text-center mt-4 mb-0" style={{ color: "#441010" }}>{error}</p>
 
           <p className="text-center mt-4 mb-0 text-secondary">
             New to Ticketly?{" "}

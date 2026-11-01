@@ -1,7 +1,11 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
+import register from "../../services/register";
 
 function Register() {
+  const [error, seterror] = useState("")
+  const [loading, setloading] = useState(false)
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     fullName: "",
     username: "",
@@ -78,9 +82,23 @@ function Register() {
           </p>
 
           <form
-            onSubmit={(e) => {
+            onSubmit={async(e) => {
+              setloading(true)
               e.preventDefault();
-              console.log(formData);
+              if (formData.password !== formData.confirmPassword){
+                seterror("Password Mismatch")
+                setloading(false)
+                return
+              }
+              const result = await register(formData.username,formData.password)
+              if (result.msg === "Registration Successfull!"){
+                setloading(false)
+                navigate('/login/')
+              }else {
+                seterror("Something is Wrong, Try Again!!!")
+                setloading(false)
+                return
+              }
             }}
           >
             <div className="row g-3">
@@ -154,12 +172,15 @@ function Register() {
 
             <button
               type="submit"
+              disabled = {loading}
               className="btn btn-lg w-100 text-white fw-bold py-3 mt-4"
               style={{ backgroundColor: "#a00024" }}
             >
               Create Account →
             </button>
           </form>
+
+          <p className="text-center mt-4 mb-2" style={{ color: "#a00023" }}>{error}</p>
 
           <p className="text-center text-secondary mt-4 mb-2">
             Already have an account?{" "}

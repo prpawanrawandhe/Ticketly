@@ -1,6 +1,6 @@
 import { refreshAccessToken } from "./auth"
 
-const URL = "http://127.0.0.1:8000/"
+const URL = import.meta.env.VITE_API_BASE_URL
 
 const fetchWithAuth = async ({path, method = "GET", auth = false, body = null, tryed = 0}) => {
     const access_token = localStorage.getItem("access")

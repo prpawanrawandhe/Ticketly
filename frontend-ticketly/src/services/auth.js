@@ -1,5 +1,5 @@
 
-const URL = "http://127.0.0.1:8000/"
+const URL = import.meta.env.VITE_API_BASE_URL
 
 const userlogin = async(username,password,setUsername,setaccess_token)=>{
     const credentials = {"username":username,"password":password}

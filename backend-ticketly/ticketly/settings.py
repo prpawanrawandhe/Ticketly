@@ -158,3 +158,7 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     '.onrender.com',
 ]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://ticketly-cqu9.onrender.com",
+]

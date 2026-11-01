@@ -1,9 +1,9 @@
 
-const URL = "http://localhost:8000/"
+const URL = import.meta.env.VITE_API_BASE_URL
 
 const userlogin = async(username,password,setUsername,setaccess_token)=>{
     const credentials = {"username":username,"password":password}
-    const url = URL+"account/token/"
+    const url = URL+"/account/token/"
 
     try {const res = await fetch(url,{
         method:"POST",
@@ -42,8 +42,8 @@ const userlogin = async(username,password,setUsername,setaccess_token)=>{
 
 export const refreshAccessToken = async () => {
     const refresh = localStorage.getItem("refresh");
-
-    const response = await fetch("http://127.0.0.1:8000/account/refresh/", {
+    const url = URL+"/account/refresh/"
+    const response = await fetch(url, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ refresh:refresh })

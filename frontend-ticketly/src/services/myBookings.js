@@ -5,7 +5,7 @@ const fetchBookings = async () => {
     const access_token = localStorage.getItem('access')
     try {
         const res = await fetch(
-            `${API_URL}book/bookings/`,
+            `${API_URL}/book/bookings/`,
             {
                 headers: {
                     Authorization: `Bearer ${access_token}`,

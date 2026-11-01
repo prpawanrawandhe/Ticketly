@@ -1,4 +1,4 @@
-const URL = "http://127.0.0.1:8000/"
+const URL = import.meta.env.VITE_API_BASE_URL
 
 const booking = async (id,booking_data,access_token) => {
     const url = `${URL}book/create-booking/${id}`

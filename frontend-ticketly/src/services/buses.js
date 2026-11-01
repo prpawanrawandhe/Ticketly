@@ -7,7 +7,7 @@ const listBuses=async(source,destination,date)=>{
         destination:destination,
         date:date
     })
-    const url = `${URL}routes/available-schedules/?${params}`
+    const url = `${URL}/routes/available-schedules/?${params}`
     try{
         const res = await fetch(url)
         const result = await res.json()

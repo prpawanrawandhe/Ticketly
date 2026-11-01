@@ -6,7 +6,7 @@ const fetchWithAuth = async ({path, method = "GET", auth = false, body = null, t
     const access_token = localStorage.getItem("access")
     const retry_limit = 2
 
-    const url = URL + path
+    const url = `${URL}/${path}`
 
     if (tryed>retry_limit) {
         window.location.href = "/login";

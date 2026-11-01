@@ -1,4 +1,4 @@
-const URL = "http://127.0.0.1:8000/"
+const URL = import.meta.env.VITE_API_BASE_URL
 
 const booking_confirm = async (id,access_token) => {
     const url = `${URL}payments/payment-confirmation/${id}`

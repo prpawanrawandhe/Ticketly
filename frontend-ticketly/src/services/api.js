@@ -39,6 +39,7 @@ const fetchWithAuth = async ({path, method = "GET", auth = false, body = null, t
     } catch (err) {
         console.log(err)
     }
+    return "error"
 
 }
 
